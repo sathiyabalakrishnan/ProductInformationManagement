@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "e9622fa5-61ea-4d65-b266-1395d65f483a",
+		"name": "Mercado - SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\":1,\n  \"title\":\"Sapiens: A Brief History of Humankind\",\n  \"description\":\"A beautiful book about history of humans\",\n  \"price\":\"100\",\n  \"quantity\":\"10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/productBysku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/product?sku=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "sku",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"title\":\"Sapiens: A Brief History of Humankind\",\n  \"description\":\"A beautiful book about history of humans\",\n  \"price\":\"100\",\n  \"quantity\":\"11\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
